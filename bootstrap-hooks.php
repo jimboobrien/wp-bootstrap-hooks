@@ -22,7 +22,7 @@ require_once 'lib/html.php';
 require_once 'features/functions.php';
 require_once 'features/addons/addons.php';
 require_once 'features/adminbar/adminbar.php';
-require_once 'features/icons/icons.php';
+//require_once 'features/icons/icons.php';
 
 function wp_bootstrap_hooks() {
   $args = func_get_args();
