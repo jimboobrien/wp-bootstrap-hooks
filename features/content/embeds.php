@@ -53,7 +53,7 @@ function the_content_embeds($content) {
       $height = $iframe_element->getAttribute('height');
 
       // Create wrapper
-      $iframe_wrapper = wrap($iframe_element, 'div');
+      $iframe_wrapper = wrap_element($iframe_element, 'div');
 
       // Set embed container class
       add_class($iframe_wrapper, $embed_container_class);
