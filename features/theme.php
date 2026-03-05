@@ -341,21 +341,21 @@ function _bootstrap_presets_css_action() {
 	exit;
 }
 
-add_action('wp_ajax_nopriv_bootstrap_presets_css', '_bootstrap_presets_css_action');
-add_action('wp_ajax_bootstrap_presets_css', '_bootstrap_presets_css_action');
+// add_action('wp_ajax_nopriv_bootstrap_presets_css', '_bootstrap_presets_css_action');
+// add_action('wp_ajax_bootstrap_presets_css', '_bootstrap_presets_css_action');
 
-add_action( 'enqueue_block_assets', function() {
-	$url = add_query_arg('action', 'bootstrap_presets_css', admin_url( 'admin-ajax.php' ));
-	
-	if (_bootstrap_is_block_editor()) {
-		$url = add_query_arg('is_editor', '1', $url);
-
-    wp_enqueue_script( 'bootstrap-editor',  plugin_dir_url( dirname(__FILE__) ) . '/assets/editor.js' );
-	}
-
-	wp_register_style('bootstrap-global-styles', $url);
-	wp_enqueue_style('bootstrap-global-styles');
-}, 1000);
+// add_action( 'enqueue_block_assets', function() {
+// 	$url = add_query_arg('action', 'bootstrap_presets_css', admin_url( 'admin-ajax.php' ));
+//
+// 	if (_bootstrap_is_block_editor()) {
+// 		$url = add_query_arg('is_editor', '1', $url);
+//
+//     wp_enqueue_script( 'bootstrap-editor',  plugin_dir_url( dirname(__FILE__) ) . '/assets/editor.js' );
+// 	}
+//
+// 	wp_register_style('bootstrap-global-styles', $url);
+// 	wp_enqueue_style('bootstrap-global-styles');
+// }, 1000);
 
 
 
